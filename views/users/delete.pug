@@ -1,0 +1,15 @@
+h1 Press delete what a book you want to remove (^_^!)
+
+a(href='/') Home
+br
+a(href="/users/add") Add User
+br
+a(href='/users') List Users
+ul
+  each user in users
+    li
+       span=user.name
+       span &nbsp
+       span &nbsp
+      
+       a(href="/users/delete/" +user.id) Delete

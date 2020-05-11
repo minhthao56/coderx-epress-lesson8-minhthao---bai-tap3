@@ -1,0 +1,28 @@
+h1 Select your user and book which you want to borrow
+
+
+form#form(action='/trans/add', method='POST')
+  input#input(type='text', name='timeb' value = new Date, style="display: none;")
+  br
+  button#bts Borrow
+
+select#cars(name='bookId', form='form')
+  each title in titles
+    option(value= title.id)=title.tl
+select#cars(name='userId', form='form')
+  each user in users
+    option(value=user.id)=user.name 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

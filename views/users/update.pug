@@ -1,0 +1,14 @@
+h1 Press edit what a book you want to change title (^_^!)
+
+a(href='/') Home
+br
+a(href='/users') List Users
+
+ul
+  each user in users
+    li
+       span=user.name
+       span &nbsp
+       span &nbsp
+      
+       a(href="/users/update/" +user.id) Edit

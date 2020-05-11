@@ -1,0 +1,33 @@
+
+h1 Can I help you? :)
+a(href='/users') List Users
+br
+a(href='/users/add') Add User
+br
+a(href='/users/update') Update User
+br
+a(href='/users/delete') Delete User
+
+form(action="/users/find", method="GET")
+  input#input(type='text', name='q')
+  button#bts Find
+
+ul
+  each user in users
+    li
+       span=user.name
+       span &nbsp
+       span &nbsp
+      
+       a(href="/users/detail/" +user.id) Detail
+
+
+
+
+script.
+  var input = document.getElementById("input");
+  var button = document.getElementById("bts");
+  button.addEventListener("click", function(){
+  sessionStorage.setItem("d1", input.value)
+  });
+  input.value=sessionStorage.getItem("d1");

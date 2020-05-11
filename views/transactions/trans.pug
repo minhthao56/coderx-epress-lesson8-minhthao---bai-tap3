@@ -1,0 +1,16 @@
+a(href="/") Home
+br
+a(href="trans/") List Trancsaction
+br
+a(href="trans/add") Borrow book
+br
+span Bạn có sự kiện mượn sách lúc:
+ul
+  each tran in trans
+    li
+       span=tran.timeb
+       span &nbsp
+       span &nbsp
+      
+       a(href="trans/detail/"+tran.id+"/book/"+tran.bookId+"/user/"+tran.userId) Detail
+

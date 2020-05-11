@@ -1,0 +1,14 @@
+h1 Press edit what a book you want to change title (^_^!)
+
+a(href='/') Home
+br
+a(href='/books') List Books
+
+ul
+  each title in titles
+    li
+       span=title.tl
+       span &nbsp
+       span &nbsp
+      
+       a(href="/books/update/" +title.id) Edit

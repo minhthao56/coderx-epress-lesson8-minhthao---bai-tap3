@@ -1,0 +1,33 @@
+
+h1 Can I help you? :)
+a(href='/books') List Books
+br
+a(href='/books/add') Add Book
+br
+a(href='/books/update') Update book
+br
+a(href='/books/delete') Delete Book
+
+form(action="/books/find", method="GET")
+  input#input(type='text', name='q')
+  button#bts Find
+
+ul
+  each title in titles
+    li
+       span=title.tl
+       span &nbsp
+       span &nbsp
+      
+       a(href="/books/detail/" +title.id) Detail
+
+
+
+
+script.
+  var input = document.getElementById("input");
+  var button = document.getElementById("bts");
+  button.addEventListener("click", function(){
+  sessionStorage.setItem("d1", input.value)
+  });
+  input.value=sessionStorage.getItem("d1");
